@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import styles from 'components/Profile/Profile.module.css';
-
+import Container from 'components/Container/Container';
 // console.log(user)
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
-  return (
+  return (<Container>
     <div className={styles.profile}>
       <div className="description">
         <img
@@ -32,6 +32,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
         </li>
       </ul>
     </div>
+    </Container>
   );
 };
 
