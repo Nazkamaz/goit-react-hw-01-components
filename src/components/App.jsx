@@ -1,8 +1,10 @@
 import Profile from "./Profile/Profile";
-// import { ReactDOM } from "react-dom";
+import friends from '../data/friends.json'
 import user from "../data/user.json";
 import StatisticsData from "../data/StatisticsData.json";
 import Statistics from "./Statistics/Statistics";
+import Friendlist from "./FriendList/FriendList";
+
 
 console.log(StatisticsData);
 
@@ -10,16 +12,7 @@ export const App = () => {
   return (
     <div
     className="App"
-      // style={{
-      //   height: '100vh',
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      //   fontSize: 40,
-      //   color: '#010101'
-      // }
-    // }
-    >
+         >
       <Profile
         username={user.username}
         tag={user.tag}
@@ -32,6 +25,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={StatisticsData} />
       <Statistics stats={StatisticsData} />
+      <Friendlist friends={friends}/>
             
     </div>
   );
